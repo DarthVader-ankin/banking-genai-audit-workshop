@@ -1,0 +1,3 @@
+{"timestamp": "2024-07-03T10:15:23.456Z", "level": "INFO", "service": "auth-service", "event": "login_attempt", "user_id": "user123", "ip_address": "203.45.67.89", "result": "success", "mfa_enabled": true}
+{"timestamp": "2024-07-03T10:16:45.123Z", "level": "WARN", "service": "auth-service", "event": "login_attempt", "user_id": "user456", "ip_address": "45.67.89.101", "result": "failed", "failure_reason": "invalid_credentials", "attempt_count": 3}
+{"timestamp": "2024-07-03T10:17:12.789Z", "level": "ERROR", "service": "auth-service", "event": "login_attempt", "user_id": "user789", "ip_address": "89.101.112.123", "result": "failed", "failure_reason": "account_locked", "attempt_count": 5}

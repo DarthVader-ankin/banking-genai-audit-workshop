@@ -1,0 +1,6 @@
+# Failed Login Attempts Analysis
+index=fastpay_logs service="auth-service" event="login_attempt" result="failed"
+| stats count by user_id, ip_address, failure_reason
+| where count > 3
+| sort -count
+| eval risk_level=case(count>10, "Critical", count>5, "High", count>3, "Medium")
